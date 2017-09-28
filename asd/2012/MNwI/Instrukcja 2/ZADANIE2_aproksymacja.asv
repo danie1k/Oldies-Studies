@@ -1,0 +1,43 @@
+% Interpolacja i aproksymacja
+
+% ZADANIE 2
+% Dla danych w punkcie 1, zbadaj doœwiadczalnie wp³yw stopnia wielomianu
+% aproksymacyjnego na w³aœciwoœci uzyskanego przybli¿enia. W tym celu
+% wykorzystaj funkcje Matlaba polyfit (wyznaczaj¹c¹ wspó³czynniki wielomianu
+% aproksymacyjnego) oraz polyval (wyznaczaj¹c¹ wartoœæ wielomianu o danych
+% wspó³czynnikach i zadanej wartoœci argumentu). Zestaw wykresy wielomianów
+% aproksymacyjnych ró¿nych stopni (w jednym oknie) oraz w kolejnym wykresy
+% funkcji b³êdu (ró¿nica pomiêdzy wartoœci¹ rzeczywistych danych a
+% aproksymowan¹).
+
+% function ZADANIE2_aproksymacja()
+
+% Indeks WIG20 za m-c maj 2012
+x = 1:21;
+y = [
+    2096.35,
+    2072.09,
+    2090.74, 2055.69, 2037.18, 2035.80, 2038.14, 2099.75, 2096.35, 2060.99, 2057.12, 2119.73, 2111.15, 2137.12, 2178.77, 2187.54, 2168.49, 2168.35, 2217.40, 2210.08, 2225.96
+   ];
+
+figure
+plot(x, y, 'r.')
+title('Indeks WIG20 / maj 2012');
+axis([1 21 min(y) max(y)])
+xlabel('Dzieñ miesi¹ca');
+ylabel('Wartoœæ na zamkniêcie sesji');
+hold on; grid on;
+
+xx=1:0.2:21;
+
+p1 = polyfit(x, y, 5);
+v1 = polyval(p1, xx);
+plot(xx, v1, 'b-')
+
+p2 = polyfit(x, y, 9);
+v2 = polyval(p2, xx);
+plot(xx, v2, 'b-')
+
+p3 = polyfit(x, y, 15);
+v3 = polyval(p3, xx);
+plot(xx, v3, 'm-')

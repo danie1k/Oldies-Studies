@@ -1,0 +1,62 @@
+body {
+	background: #E6E6E6;
+	cursor: default;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin: 5em 5em 0;
+}
+
+h3 {
+	border-bottom: 1px solid #AAAAAA;
+}
+
+textarea {
+	font-family: monospace !important;
+	white-space: nowrap;
+}
+
+#main {
+	margin-top: 3em;
+}
+
+#main .tabBody {
+	background: #FFFFFF;
+
+}
+
+.formRow {
+	clear: both;
+	margin: 0 2em;
+	padding: 0.4em 0;
+	border-bottom: 1px solid #DDDDDD;
+}
+
+.formRow.last {
+	border: none;
+}
+
+.formRow label {
+	width: 160px;
+	display: block;
+	float: left;
+}
+
+.formRow em label {
+	width: auto;
+	display: inline;
+	float: none;
+}
+
+.formRow em {
+	display: block;
+	margin: 3px 0 0 160px;
+}
+
+.formSubmit {
+	margin: 1em 0;
+}
+
+.footer {
+	padding: 1em;
+	text-align: center;
+}
